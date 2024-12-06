@@ -10,10 +10,14 @@ namespace Medicine.Controllers
     public class CartController : ControllerBase
     {
         private readonly AppDbContext dbContext;
+         private Users userData;
+        private Medicines medicine;
 
-        public CartController(AppDbContext dbContext)
+        public CartController(AppDbContext dbContext,Medicines medicines,Users users)
         {
             this.dbContext = dbContext;
+            this.medicine = medicines;
+            this.userData = users;
         }
 
         [HttpGet]
@@ -38,13 +42,15 @@ namespace Medicine.Controllers
         [HttpPost]
         public IActionResult AddToCart(CartDTO cartDTO)
         {
+           
             var cartData = new Cart()
             {
                 Discount = cartDTO.Discount,
-                MedicineID = cartDTO.MedicineID,
                 Quantity = cartDTO.Quantity,
                 TotalPrice = cartDTO.TotalPrice,
                 UnitPrice = cartDTO.UnitPrice,
+                MedicineID = medicine.Id.ToString(),
+                UserId = userData.UserId,
             };
             if(cartData != null)
             {

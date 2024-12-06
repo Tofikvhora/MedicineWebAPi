@@ -1,8 +1,11 @@
-﻿namespace Medicine.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Medicine.Models
 {
     public class Medicines
     {
 
+        [Key]
         public Guid Id { get; set; }
         public required string Name { get; set; }
         public required string Manufacturer { get; set; }

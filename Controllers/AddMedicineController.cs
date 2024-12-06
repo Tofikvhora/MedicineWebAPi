@@ -23,6 +23,7 @@ namespace Medicine.Controllers
             var medicineData = new Medicines()
             {
                 Name = medicineDTO.Name,
+               
                 Manufacturer = medicineDTO.Manufacturer,
                 UnitPrice = medicineDTO.UnitPrice,
                 Quantity = medicineDTO.Quantity,

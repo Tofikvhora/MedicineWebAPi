@@ -4,12 +4,13 @@ namespace Medicine.Models
 {
     public class Cart
     {
-     
+
+        [Key]
         public Guid Id { get; set; }
 
-        public int UserId { get; set; } = 1520055;
+        public string UserId { get; set; }
 
-        public int MedicineID { get; set; } 
+        public string MedicineID { get; set; } 
         public decimal UnitPrice { get; set; }
 
         public decimal Discount { get; set; }
