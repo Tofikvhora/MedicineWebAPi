@@ -28,6 +28,7 @@ namespace Medicine.Controllers
         {
             var OrderData = new OrderItems()
             {
+                UserId = orderDto.UserId,
                 OrderId = Guid.NewGuid().ToString(),
                 Discount = orderDto.Discount,
                 Medicine = orderDto.Medicine,   
@@ -38,6 +39,7 @@ namespace Medicine.Controllers
 
             var OrderAdminData = new Order()
             {
+                UserId = orderDto.UserId,
                 OrderNo = Guid.NewGuid().ToString(),
                 OrderTotal = orderDto.TotalPrice,
                 OrderStatus = "Pending"

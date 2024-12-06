@@ -2,6 +2,8 @@
 {
     public class OrderDTO
     {
+        public string UserId { get; set; }
+
         public string Medicine { get; set; }
         public decimal UnitPrice { get; set; }
 

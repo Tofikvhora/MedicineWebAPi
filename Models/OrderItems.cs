@@ -6,6 +6,8 @@ namespace Medicine.Models
     {
         [Key]
         public Guid Id { get; set; }
+        public string UserId { get; set; }
+
         public string OrderId { get; set; }
         public string Medicine { get; set; }
         public decimal UnitPrice { get; set; }

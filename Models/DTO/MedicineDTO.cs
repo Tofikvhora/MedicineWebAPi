@@ -2,16 +2,16 @@
 {
     public class MedicineDTO
     {
-        public required string Name { get; set; }
-        public required string Manufacturer { get; set; }
+        public  string Name { get; set; }
+        public  string Manufacturer { get; set; }
 
-        public required decimal UnitPrice { get; set; }
+        public  decimal UnitPrice { get; set; }
 
         public decimal Discount { get; set; }
-        public required int Quantity { get; set; }
+        public  int Quantity { get; set; }
 
         public DateTime ExpDate { get; set; } = DateTime.Now;
 
-        public required string ImageUrl { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

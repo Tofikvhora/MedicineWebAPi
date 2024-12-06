@@ -51,6 +51,11 @@ namespace Medicine.Controllers
         [HttpGet]
         public IActionResult GetAllMedicine()
         {
+            var md = dbContext.medicines.ToList();
+            if(md == null)
+            {
+                return NotFound("Medicines not Found");
+            }
             return Ok(dbContext.medicines.ToList());
         }
 

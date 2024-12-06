@@ -2,6 +2,9 @@
 {
     public class CartDTO
     {
+        public string UserId { get; set; }
+
+        public string MedicineID { get; set; }
         public decimal UnitPrice { get; set; }
 
         public decimal Discount { get; set; }
